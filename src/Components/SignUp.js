@@ -8,12 +8,14 @@ function SignUp() {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+    const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const SignUp = (e) => {
     e.preventDefault();
     if (fullname === "" || email === "" || password === "") {
-      alert("All Fields Required");
+      // alert("All Fields Required");
+      setError(true);
     } else {
       console.log(fullname);
       console.log(email);
@@ -32,7 +34,7 @@ function SignUp() {
       <form onSubmit={SignUp}>
         <FormControl>
           <Box
-            m={2} 
+            m={2}
             display="flex"
             flexDirection="column"
             alignItems="center"
@@ -44,6 +46,7 @@ function SignUp() {
             <AccountCircleIcon sx={{ fontSize: 100 }} />
             <h4>Create a new account</h4>
             <TextField
+              error={error}
               fullWidth
               type="text"
               variant="filled"
@@ -52,6 +55,7 @@ function SignUp() {
               label="Full Name"
             ></TextField>
             <TextField
+              error={error}
               fullWidth
               type="email"
               variant="filled"
@@ -60,6 +64,7 @@ function SignUp() {
               label="Email ID"
             ></TextField>
             <TextField
+              error={error}
               fullWidth
               type="password"
               variant="filled"
