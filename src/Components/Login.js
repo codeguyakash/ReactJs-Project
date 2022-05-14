@@ -9,12 +9,15 @@ console.log("9810707983 & 123@abcd");
 function Login() {
   const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+
   const navigate = useNavigate();
 
   const onLogin = (e) => {
     e.preventDefault();
     if (mobile === "" || password === "") {
-      alert("Both Fields Required");
+      // alert("Both Fields Required");
+      setError(true);
     } else {
       const userdata = {
         user_detail: mobile,
@@ -62,6 +65,7 @@ function Login() {
             <h4>Log in to fakebook</h4>
 
             <TextField
+              error={error}
               fullWidth
               type="text"
               variant="filled"
@@ -71,6 +75,7 @@ function Login() {
             />
 
             <TextField
+              error={error}
               fullWidth
               type="password"
               variant="filled"
