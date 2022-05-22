@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/codeguyakash/ReactJs-Project/static/css/main.7dd34902.css",
+    "main.js": "/codeguyakash/ReactJs-Project/static/js/main.9b38f43e.js",
+    "index.html": "/codeguyakash/ReactJs-Project/index.html",
+    "main.7dd34902.css.map": "/codeguyakash/ReactJs-Project/static/css/main.7dd34902.css.map",
+    "main.9b38f43e.js.map": "/codeguyakash/ReactJs-Project/static/js/main.9b38f43e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7dd34902.css",
+    "static/js/main.9b38f43e.js"
+  ]
+}
